@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cs329e.coinflip.FlippedActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/flipped_title"
+        android:id="@+id/textTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/flipped_glance"
+        android:id="@+id/textView3"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textTitle"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textRestaurantName"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="false"
+        android:textSize="30dp"
+        android:text="-" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textFoodType"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="20dp"
+        android:text="-" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textFact1"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/textFoodType"
+        android:layout_alignParentStart="true"
+        android:text="-" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textFact2"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/textFact1"
+        android:layout_alignParentStart="true"
+        android:text="-" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/textPriceRange"
+        android:paddingLeft="20dp"
+        android:layout_below="@+id/textFact2"
+        android:layout_alignParentStart="true"
+        android:text="@string/flipped_price_range" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/flipped_visit_count"
+        android:id="@+id/textVisitCount"
+        android:layout_below="@+id/textLastVisit"
+        android:layout_alignRight="@+id/textTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/flipped_last_visit"
+        android:id="@+id/textLastVisit"
+        android:layout_below="@+id/textYourRating"
+        android:layout_alignRight="@+id/textTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/flipped_your_rating"
+        android:id="@+id/textYourRating"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignEnd="@+id/textTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/flipped_coin_rating"
+        android:id="@+id/textCoinRating"
+        android:layout_below="@+id/textFact2"
+        android:layout_alignEnd="@+id/textTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/flipped_coin_rating"
+        android:id="@+id/textFavorited"
+        android:layout_below="@+id/textCoinRating"
+        android:layout_alignEnd="@+id/textCoinRating" />
+</RelativeLayout>
