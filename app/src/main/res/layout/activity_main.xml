@@ -42,6 +42,7 @@
         android:layout_height="wrap_content"
         android:text="@string/filter_options"
         android:id="@+id/buttonFilter"
-        android:layout_above="@+id/buttonConnectGplay"
-        android:layout_marginBottom="54dp" />
+        android:layout_below="@+id/buttonFlip"
+        android:layout_alignEnd="@+id/buttonFlip"
+        android:layout_marginTop="38dp" />
 </RelativeLayout>

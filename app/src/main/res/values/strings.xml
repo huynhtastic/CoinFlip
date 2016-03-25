@@ -6,7 +6,7 @@
     <string name="connect_gplay">Connect with Google Play</string>
     <string name="filter_options">Filtering Options</string> <!-- referenced in FilterActivity also -->
     <!-- FilterActivity -->
-    <string-array name="filter_array_price">
+    <string-array name="filter_array_price_label">
         <item>$</item>
         <item>$$</item>
         <item>$$$</item>
