@@ -6,7 +6,7 @@
     <string name="connect_gplay">Connect with Google Play</string>
     <string name="filter_options">Filtering Options</string> <!-- referenced in FilterActivity also -->
     <!-- FilterActivity -->
-    <string-array name="filter_array_price_label">
+    <string-array name="filter_array_price">
         <item>$</item>
         <item>$$</item>
         <item>$$$</item>
@@ -24,4 +24,9 @@
     <string name="flipped_coin_rating">CoinFlip Rating: </string>
     <string name="flipped_favorited"> CoinFlippers have favorited this location.</string>
     <string name="flipped_price_range">Price Range - </string>
+    <!-- Temp Display Activity -->
+    <string name="price_label">Maximum Price: </string>
+    <string name="open_label">Open Now: </string>
+    <string name="deals_label">Deals Available: </string>
+    <string name="distance_label">Maximum Distance: </string>
 </resources>

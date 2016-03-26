@@ -52,11 +52,15 @@ public class FilterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (v.getId() == btnFlip.getId()) {
                     // see what switches are flipped to filter
-                    Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
-                    i.putExtra("price", (schPrice.isChecked()) ? spnPrice.getSelectedItem().toString() : false); // if it's switched on, take the value; false if it's off
-                    i.putExtra("open", schPrice.isChecked());
+
+                    //Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
+                    Intent i = new Intent(FilterActivity.this, DisplayActivity.class); // FOR PROTOTYPE ONLY
+                    //i.putExtra("price", (schPrice.isChecked()) ? spnPrice.getSelectedItem().toString() : false); // if it's switched on, take the value; false if it's off
+                    i.putExtra("price", (schPrice.isChecked()) ? spnPrice.getSelectedItem().toString() : "No Preference"); // FOR PROTOTYPE ONLY
+                    i.putExtra("open", schOpen.isChecked());
                     i.putExtra("deals", schDeals.isChecked());
-                    i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : false); // if it's switched on, take the value; false if it's off
+                    //i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : false); // if it's switched on, take the value; false if it's off
+                    i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
                     startActivity(i);
                 }
             }
