@@ -6,12 +6,6 @@
     <string name="connect_gplay">Connect with Google Play</string>
     <string name="filter_options">Filtering Options</string> <!-- referenced in FilterActivity also -->
     <!-- FilterActivity -->
-    <string-array name="filter_array_price">
-        <item>$</item>
-        <item>$$</item>
-        <item>$$$</item>
-        <item>$$$$</item>
-    </string-array>
     <string name="filter_open">Open Now</string>
     <string name="filter_deals">Deals/Promotions Available</string>
     <string name="filter_distance_hint">Distance (miles)</string>
