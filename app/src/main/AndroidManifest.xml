@@ -3,6 +3,7 @@
     package="cs329e.coinflip">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -18,8 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FilterActivity" />
-        <activity android:name=".FlippedActivity"></activity>
-        <activity android:name=".DisplayActivity"></activity>
+        <activity android:name=".FlippedActivity" />
+        <activity android:name=".DisplayActivity" />
     </application>
 
 </manifest>

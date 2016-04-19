@@ -1,6 +1,7 @@
 package cs329e.coinflip;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -63,7 +64,10 @@ public class FilterActivity extends AppCompatActivity {
                     i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
                     startActivity(i);
                 }
+
             }
         });
     }
+
+
 }
