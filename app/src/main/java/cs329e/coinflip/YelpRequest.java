@@ -3,6 +3,13 @@ package cs329e.coinflip;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by cjs2599 on 4/18/16.
  */
@@ -30,6 +37,14 @@ public class YelpRequest extends AsyncTask<String, Void, String> {
     }
 
     @Override protected void onPostExecute(String resp) {
+        Object obj = JSONValue.parse(resp); // parse resp object
+        JSONObject jobj = (JSONObject) obj; // convert JSON to a MAP
+        JSONArray businesses = (JSONArray) jobj.get("businesses"); // grab the array portion of the resp object and convert to a list/array
+        for (Object business : businesses) {  // loop through each business and log their business information
+            Log.v("business", business.toString());
+        }
+        Log.v("test", jobj.get("total").toString());
+        Log.v("test", jobj.get("region").toString());
         Log.v("res", resp);
     }
 
