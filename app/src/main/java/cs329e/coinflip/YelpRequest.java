@@ -3,14 +3,6 @@ package cs329e.coinflip;
 import android.os.AsyncTask;
 import android.util.Log;
 
-<<<<<<< HEAD
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
-
-import java.util.Map;
-import java.util.Set;
-=======
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,11 +11,12 @@ import java.util.Iterator;
 import org.json.JSONStringer;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.util.Map;
->>>>>>> 6b0cf4c9275ee5de396d09af7d0168b8c68d9f86
+import java.util.Set;
 
 /**
  * Created by cjs2599 on 4/18/16.
@@ -78,7 +71,7 @@ public class YelpRequest extends AsyncTask<String, Void, String> {
 
             JSONObject json = (JSONObject) obj;
 
-            
+
 
 
 
