@@ -16,6 +16,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.util.Map;
+import java.util.HashMap;
 import java.util.Set;
 
 /**
@@ -30,7 +31,7 @@ public class YelpRequest extends AsyncTask<String, Void, String> {
     private static final String TOKEN = "8DRYE5aifjtJWMbC2LbeXojy2-0TYZsV";
     private static final String TOKEN_SECRET = "6qUlZk4pTtxyHyZuub3YSEKVrRc";
 
-    private Map<String, String> RESULT;
+    private HashMap<String, String> RESULT;
 
 
 
@@ -49,37 +50,46 @@ public class YelpRequest extends AsyncTask<String, Void, String> {
 
 
     @Override protected void onPostExecute(String resp) {
+        RESULT = new HashMap<String, String>();
         Object obj = JSONValue.parse(resp); // parse resp object
         JSONObject jobj = (JSONObject) obj; // convert JSON to a MAP
         JSONArray businesses = (JSONArray) jobj.get("businesses"); // grab the array portion of the resp object and convert to a list/array
         for (Object business : businesses) {  // loop through each business and log their business information
             Log.v("business", business.toString());
+            Map mbus = (Map) business; // turn into map
+            Log.v("business keys", mbus.keySet().toString()); // see the keys
+            for (Object entry : mbus.keySet()) {
+                Log.v("entry", "key: " + entry.toString() + "; value: " + mbus.get(entry).toString());
+                RESULT.put(entry.toString(), mbus.get(entry).toString());
+            }
         }
+
+
         Log.v("test", jobj.get("total").toString());
         Log.v("test", jobj.get("region").toString());
         Log.v("res", resp);
-        RESULT.put("key", "value");
+//        RESULT.put("key", "value");
 
     }
 
-    private void randomSelector(String response) {
-        JSONParser parser = new JSONParser();
-
-        try {
-
-            Object obj = parser.parse(response);
-
-            JSONObject json = (JSONObject) obj;
-
-
-
-
-
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-    }
+//    private void randomSelector(String response) {
+//        JSONParser parser = new JSONParser();
+//
+//        try {
+//
+//            Object obj = parser.parse(response);
+//
+//            JSONObject json = (JSONObject) obj;
+//
+//
+//
+//
+//
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
 
 
 }
