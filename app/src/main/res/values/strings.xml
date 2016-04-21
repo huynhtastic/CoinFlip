@@ -11,7 +11,7 @@
     <string name="filter_distance_hint">Distance (miles)</string>
     <!-- FlippedActivity -->
     <string name="flipped_title">Restaurant Flipped</string>
-    <string name="flipped_glance">At A Glance:</string>
+    <string name="flipped_glance">At A Glance: </string>
     <string name="flipped_visit_count">Visit Count: </string>
     <string name="flipped_last_visit">Last Visit: </string>
     <string name="flipped_your_rating">Your rating: </string>
