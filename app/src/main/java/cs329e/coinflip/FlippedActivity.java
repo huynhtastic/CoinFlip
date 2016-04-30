@@ -67,7 +67,6 @@ public class FlippedActivity extends AppCompatActivity {
         new YelpRequest().execute();
     }
 
-
     protected void updateDisplays() {
         // set textview text to new variable values here
         String name = RESULT.get("name");
@@ -76,18 +75,11 @@ public class FlippedActivity extends AppCompatActivity {
         JSONArray categories = (JSONArray) parseCategories;
         JSONArray foodType = (JSONArray) categories.get(1);
         JSONArray fact = (JSONArray) categories.get(0);
-//        ArrayList info = new ArrayList();
-//        for (Object category : categories) {
-//            JSONArray temp = (JSONArray) category;
-//            info.add(temp);
-//        }
-
 
         txtRestaurantName.setText(name);
         txtFoodType.setText(foodType.get(0).toString() + " Food");
         txtFact1.setText(closed);
         txtFact2.setText(fact.get(0).toString());
-
     }
 
 
@@ -129,7 +121,6 @@ public class FlippedActivity extends AppCompatActivity {
             for (Object entry : business.keySet()) {
                 Log.v("entry", "key: " + entry.toString() + "; value: " + business.get(entry).toString());
                 RESULT.put(entry.toString(), business.get(entry).toString());
-//
             }
 //            for (Object business : businesses) {  // loop through each business and log their business information
 //                Log.v("business", business.toString());
@@ -141,7 +132,7 @@ public class FlippedActivity extends AppCompatActivity {
 //
 //                }
 //            }
-            Log.v("RESULT", RESULT.toString());
+//            Log.v("RESULT", RESULT.toString());
 //
 //            Log.v("test", jobj.get("region").toString());
 //            Log.v("res", resp);

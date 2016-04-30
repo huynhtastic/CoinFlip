@@ -82,7 +82,7 @@ public class FilterActivity extends AppCompatActivity {
                     i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
                     i.putExtra("rating", (schRating.isChecked()) ? getResources().getIntArray(R.array.ratings_values)[spnRating.getSelectedItemPosition()] : "No Preference");
                     startActivity(i);
-                }
+            }
 
             }
         });
