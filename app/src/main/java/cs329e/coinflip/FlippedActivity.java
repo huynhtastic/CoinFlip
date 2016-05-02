@@ -19,9 +19,6 @@ public class FlippedActivity extends AppCompatActivity {
     private static TextView txtFavorited;
 
 
-    // YelpAPI Manager
-    YelpAPIManager yelpAPI = new YelpAPIManager();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +40,8 @@ public class FlippedActivity extends AppCompatActivity {
         if (extras != null) {
             txtRestaurantName.setText(extras.getString("name"));
             txtFact1.setText(extras.getString("open"));
-            txtFact2.setText(extras.getString("cate"));
+            txtFoodType.setText(extras.getString("food"));
+            txtFact2.setText(extras.getString("extrafact"));
         }
     }
 }

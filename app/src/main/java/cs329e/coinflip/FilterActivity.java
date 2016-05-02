@@ -17,6 +17,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 
 import java.lang.reflect.Array;
+import java.util.HashMap;
 
 public class FilterActivity extends AppCompatActivity {
 
@@ -33,6 +34,9 @@ public class FilterActivity extends AppCompatActivity {
 
     // sharedPrefs Object
     // ...
+
+    // Params Hashmap
+    HashMap<String, String> params = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,17 +75,21 @@ public class FilterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (v.getId() == btnFlip.getId()) {
                     // check what switches are flipped and read values when necessary
+                    params.put("open", schOpen.isChecked() ? "true" : "false");
+                    params.put("rating", schRating.isChecked() ? getResources().getStringArray(R.array.ratings_values)[spnRating.getSelectedItemPosition()] : "0");
+                    params.put("deals", schDeals.isChecked() ? "true" : "false");
 
-                    Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
+                    new YelpRequest(FilterActivity.this).execute(params);
+//                    Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
 //                    Intent i = new Intent(FilterActivity.this, DisplayActivity.class); // FOR PROTOTYPE ONLY
                     //i.putExtra("price", (sch  Price.isChecked()) ? spnPrice.getSelectedItem().toString() : false); // if it's switched on, take the value; false if it's off
 //                    i.putExtra("price", (schPrice.isChecked()) ? getResources().getIntArray(R.array.price_values)[spnPrice.getSelectedItemPosition()] : "No Preference"); // FOR PROTOTYPE ONLY
-                    i.putExtra("open", schOpen.isChecked());
-                    i.putExtra("deals", schDeals.isChecked());
+//                    i.putExtra("open", schOpen.isChecked());
+//                    i.putExtra("deals", schDeals.isChecked());
                     //i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : false); // if it's switched on, take the value; false if it's off
 //                    i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
-                    i.putExtra("rating", (schRating.isChecked()) ? getResources().getIntArray(R.array.ratings_values)[spnRating.getSelectedItemPosition()] : "No Preference");
-                    startActivity(i);
+//                    i.putExtra("rating", (schRating.isChecked()) ? getResources().getIntArray(R.array.ratings_values)[spnRating.getSelectedItemPosition()] : "No Preference");
+//                    startActivity(i);
             }
 
             }

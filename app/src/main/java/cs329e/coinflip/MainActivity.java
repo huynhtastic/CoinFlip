@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private static Button btnFilter;
     private static Button btnConnectGplay;
 
-    HashMap<String, String> params = new HashMap<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
         btnConnectGplay = (Button) findViewById(R.id.buttonConnectGplay);
 
 
-        params.put("term", "food");
-        params.put("limit", "10");
-
         onClickButtonListeners();
     }
 
@@ -39,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == btnFlip.getId()) {
-                    new YelpRequest(MainActivity.this).execute(params);
+                    new YelpRequest(MainActivity.this).execute();
 //                    Intent i = new Intent(MainActivity.this, LoadingActivity.class);
 //                    startActivity(i);
                 }
