@@ -31,7 +31,9 @@
         android:id="@+id/switchPrice"
         android:layout_below="@+id/textView2"
         android:layout_alignParentStart="true"
-        android:checked="false" />
+        android:checked="false"
+        android:clickable="false"
+        android:enabled="false" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -48,7 +50,7 @@
         android:id="@+id/textOpen"
         android:layout_below="@+id/spinnerPrice"
         android:layout_toEndOf="@+id/switchOpen"
-        android:paddingLeft="15dp" />
+        android:paddingLeft="5dp" />
 
     <Switch
         android:layout_width="wrap_content"
@@ -63,7 +65,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/filter_deals"
         android:id="@+id/textDeals"
-        android:paddingLeft="15dp"
+        android:paddingLeft="5dp"
         android:layout_alignBaseline="@+id/switchDeals"
         android:layout_alignBottom="@+id/switchDeals"
         android:layout_toEndOf="@+id/switchDeals" />
@@ -74,7 +76,9 @@
         android:id="@+id/switchDistance"
         android:layout_below="@+id/switchDeals"
         android:layout_alignParentStart="true"
-        android:checked="false" />
+        android:checked="false"
+        android:enabled="false"
+        android:clickable="false" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -107,8 +111,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerRating"
+        android:spinnerMode="dialog"
+        android:layout_below="@+id/switchRating"
+        android:layout_toEndOf="@+id/switchRating" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Minimum Rating"
+        android:id="@+id/textView4"
         android:layout_alignTop="@+id/switchRating"
-        android:layout_toEndOf="@+id/switchRating"
-        android:spinnerMode="dialog" />
+        android:layout_toEndOf="@+id/switchRating" />
 
 </RelativeLayout>

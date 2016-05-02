@@ -17,13 +17,12 @@
     <string name="flipped_your_rating">Your rating: </string>
     <string name="flipped_coin_rating">CoinFlip Rating: </string>
     <string name="flipped_favorited"> CoinFlippers have favorited this location.</string>
-    <string name="flipped_price_range">Price Range - </string>
+    <string name="flipped_price_range">Price Range - \n - Not Available -</string>
     <!-- Temp Display Activity -->
     <string name="price_label">Maximum Price: </string>
     <string name="open_label">Open Now: </string>
     <string name="deals_label">Deals Available: </string>
     <string name="distance_label">Maximum Distance: </string>
-
 
 
 </resources>

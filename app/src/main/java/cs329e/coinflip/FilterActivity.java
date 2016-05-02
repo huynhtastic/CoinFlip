@@ -72,14 +72,14 @@ public class FilterActivity extends AppCompatActivity {
                 if (v.getId() == btnFlip.getId()) {
                     // check what switches are flipped and read values when necessary
 
-                    //Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
-                    Intent i = new Intent(FilterActivity.this, DisplayActivity.class); // FOR PROTOTYPE ONLY
-                    //i.putExtra("price", (schPrice.isChecked()) ? spnPrice.getSelectedItem().toString() : false); // if it's switched on, take the value; false if it's off
-                    i.putExtra("price", (schPrice.isChecked()) ? getResources().getIntArray(R.array.price_values)[spnPrice.getSelectedItemPosition()] : "No Preference"); // FOR PROTOTYPE ONLY
+                    Intent i = new Intent(FilterActivity.this, FlippedActivity.class);
+//                    Intent i = new Intent(FilterActivity.this, DisplayActivity.class); // FOR PROTOTYPE ONLY
+                    //i.putExtra("price", (sch  Price.isChecked()) ? spnPrice.getSelectedItem().toString() : false); // if it's switched on, take the value; false if it's off
+//                    i.putExtra("price", (schPrice.isChecked()) ? getResources().getIntArray(R.array.price_values)[spnPrice.getSelectedItemPosition()] : "No Preference"); // FOR PROTOTYPE ONLY
                     i.putExtra("open", schOpen.isChecked());
                     i.putExtra("deals", schDeals.isChecked());
                     //i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : false); // if it's switched on, take the value; false if it's off
-                    i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
+//                    i.putExtra("distance", (schDistance.isChecked()) ? edtDistance.getText().toString() : "No Preference"); // FOR PROTOTYPE ONLY
                     i.putExtra("rating", (schRating.isChecked()) ? getResources().getIntArray(R.array.ratings_values)[spnRating.getSelectedItemPosition()] : "No Preference");
                     startActivity(i);
             }

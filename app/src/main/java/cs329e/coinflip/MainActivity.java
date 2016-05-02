@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     // create references to widgets
     private static Button btnFlip;
     private static Button btnFilter;
     private static Button btnConnectGplay;
+
+    HashMap<String, String> params = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         btnFilter = (Button) findViewById(R.id.buttonFilter);
         btnConnectGplay = (Button) findViewById(R.id.buttonConnectGplay);
 
+
+        params.put("term", "food");
+        params.put("limit", "10");
+
         onClickButtonListeners();
     }
 
@@ -31,9 +39,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (v.getId() == btnFlip.getId()) {
-                    Intent i = new Intent(MainActivity.this, FlippedActivity.class);
-                    i.putExtra("random", true);
-                    startActivity(i);
+                    new YelpRequest(MainActivity.this).execute(params);
+//                    Intent i = new Intent(MainActivity.this, LoadingActivity.class);
+//                    startActivity(i);
                 }
             }
         });

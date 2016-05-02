@@ -26,7 +26,7 @@ public class DisplayActivity extends AppCompatActivity {
     private String deals_val;
     private String distance_val;
 
-    private YelpAPI api;
+//    private YelpAPI api;
 
     private static final String CONSUMER_KEY = "ngvysMUnZ3h3aBNU4MBdjA";
     private static final String CONSUMER_SECRET = "A1g4VBz3GAUszZ7utSQinWCsg1I";
