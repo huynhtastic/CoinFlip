@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_orange_light">
+
+    <RelativeLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="cs329e.coinflip.MainActivity"
+        android:background="@android:color/holo_orange_light"
+        android:scrollIndicators="top|bottom">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:textSize="30sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="53dp"
+            android:id="@+id/textView"
+            android:textColor="@android:color/white"
+            android:layout_gravity="left" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:text="@string/flip_button"
+            android:id="@+id/buttonFlip"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="35dp"
+            android:textSize="30sp"
+            android:background="@android:color/holo_orange_dark" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_gplay"
+            android:id="@+id/buttonConnectGplay"
+            android:layout_marginTop="400dp"
+            android:layout_marginBottom="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:text="@string/filter_options"
+            android:id="@+id/buttonFilter"
+            android:layout_below="@+id/buttonFlip"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:background="@android:color/holo_orange_dark" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
+
